@@ -1,0 +1,140 @@
+.scroll-down {
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 75px;
+  height: 80px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+/* (Mouse Effects) */
+.scroll-down.mouse {
+  height: 100px;
+}
+.scroll-down.mouse span {
+  /* position: relative; */
+  display: inline-block;
+  width: 30px;
+  height: 55px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+  top: 5px;
+}
+
+/* Effect 3 */
+.scroll-down.mouse.effect span::after {
+  position: absolute;
+  content: "";
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 6px;
+  height: 6px;
+  border-radius: 100%;
+  background: #0078ff;
+  animation: animateMousePointer 1.5s infinite;
+}
+@keyframes animateMousePointer {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+}
+
+/* --------------------- */
+
+.center{
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  padding: 20px;
+}
+
+.timeline-edu, .timeline-exp {
+  position: relative;
+  padding: 22px 0;
+}
+.timeline-edu:last-child:before, .timeline-exp:last-child:before {
+  height: 0;
+}
+.timeline-edu:before, .timeline-exp:before {
+  content: "";
+  background: #0078ff;
+  width: 3px;
+  height: 100%;
+  position: absolute;
+  left: 38px;
+}
+
+.timeline-exp:before{
+  background-color: #ffffff;
+}
+
+.timeline-yr-edu, .timeline-yr-exp {
+  background: #0078ff;
+  border-radius: 100%;
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  line-height: 75px;
+  text-align: center;
+}
+
+.timeline-yr-exp{
+  background: #ffffff;
+}
+
+.timeline-yr-edu span, .timeline-yr-exp span {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  line-height: 75px;
+}
+
+.timeline-yr-exp span{
+  color: #0078ff;
+}
+
+.timeline-info-edu, .timeline-info-exp {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 432px;
+  margin-left: 6em;
+}
+.timeline-info-edu small, .timeline-info-exp small {
+  color: #474559;
+  font-size: 16px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+}
+
+.timeline-info-exp small{
+  color: #383746;
+}
+
+.exp-title{
+  color: #383746;
+}
+
+@media (max-width: 580px) {
+	.timeline-info small {
+    display: block;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* ---------------------------------------------------- */
